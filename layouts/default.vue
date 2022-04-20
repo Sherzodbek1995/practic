@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header />
+    <HomeHeader />
     <Nuxt />
-    <Footer />
+    <HomeFooter />
   </div>
 </template>
 
@@ -10,5 +10,4 @@
 export default {};
 </script>
 
-<style>
-</style>
+<style></style>

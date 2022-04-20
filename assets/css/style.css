@@ -1,14 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+.container {
+    max-width: 1440px;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 a {
     color: #fff;
+    display: inline-block;
     text-decoration: none;
 }
 
 p {
     margin: 0;
+}
+
+.header {
+    position: relative;
+    background-image: url('~/assets/images/banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 948px;
+}
+
+.HomeNav-notification__volume img {
+    width: 24px;
+}
+
+.fa-mobile-phone {
+    font-size: 30px;
+    color: #fff;
+}
+
+.HomeNav-inner {
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HomeNav-left {
+    max-width: 608px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.HomeNav-left,
+.HomeNav-right {
+    display: flex;
+    align-items: center
+}
+
+.HomeNav-logos {
+    display: flex;
+    align-items: center;
+    max-width: 345px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.HomeNav-logos__icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.line {
+    width: 24px;
+    height: 0px;
+    border: 1px solid #FFFFFF;
+    transform: rotate(90deg);
+}
+
+.HomeNav-search__icon span {
+    margin-left: 20px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.HomeNav-menu span:first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.HomeNav-menu span:nth-child(2) {
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.HomeNav-menu span:last-child {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+}
+
+.HomeNav-right {
+    max-width: 540px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.HomeNav-right__btn:hover {
+    background: #fff;
+}
+
+.HomeNav-right__btn span {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.HomeNav-right__btn span:hover {
+    color: #000;
+}
+
+.HomeNav-right__btn {
+    background: #1896FC;
+    border-radius: 4px;
+    width: 209px;
+    height: 48px;
+    transition: .5s all linear;
+}
+
+.HomeNav-menu {
+    position: relative;
+    width: 24px;
+    height: 20px;
+}
+
+.HomeNav-right select {
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+}
+
+.header-content {
+    margin-top: 173px;
+}
+
+.header-content__date {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #E0E0E0;
+}
+
+.header-content__title {
+    padding: 16px 0px;
+    width: 966px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: #FFFFFF;
+}
+
+.header-content__text {
+    width: 622px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #E0E0E0;
+}
+
+.header-content__hashtag {
+    padding: 8px 0px 24px 0px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.header-content__btn span {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.header-content__btn:hover {
+    background: #fff;
+}
+
+.header-content__btn span:hover {
+    color: #000;
+}
+
+.header-content__btn {
+    transition: all .4s ease;
+    width: 153px;
+    height: 48px;
+    background: #1896FC;
+    border-radius: 4px;
 }
