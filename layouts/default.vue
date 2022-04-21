@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <HomeHeader />
+  <div id="wrapper">
+    <Header />
     <Nuxt />
-    <HomeFooter />
+    <Footer />
   </div>
 </template>
 
@@ -10,4 +10,8 @@
 export default {};
 </script>
 
-<style></style>
+<style>
+#wrapper {
+  position: relative;
+}
+</style>

@@ -18,7 +18,9 @@ export default {
         "~/assets/css/style.css",
     ],
 
-    plugins: [],
+    plugins: [
+        { src: "~/plugins/VueAwesomeSwiper.js", mode: "client" },
+    ],
 
     components: true,
 
