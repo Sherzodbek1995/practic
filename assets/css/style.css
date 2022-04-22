@@ -6,7 +6,7 @@
     }
     
     .container {
-        max-width: 1440px;
+        max-width: 1464px;
     }
     
     ul,
@@ -167,17 +167,75 @@
         min-height: 950px;
     }
     
-    .banner-border {
+    .home-border {
         position: absolute;
-        z-index: -1;
         height: 100%;
         left: 104px;
-        top: 0;
-        max-width: 1712px;
-        width: 100%;
+        top: -19px;
+        right: 104px
     }
     
-    .banner-border::before {
+    .home-border__top {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        right: 0
+    }
+    
+    .home-border__top::before {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        left: -4px;
+        top: 100px;
+        background: #A5A5A4;
+        border-radius: 16px;
+    }
+    
+    .home-border__top::after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        right: -4px;
+        top: 100px;
+        background: #A5A5A4;
+        border-radius: 16px;
+    }
+    
+    .home-border__bottom {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        bottom: -38px;
+        right: 0
+    }
+    
+    .home-border__bottom::before {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        left: -4px;
+        bottom: 100px;
+        background: #A5A5A4;
+        border-radius: 16px;
+    }
+    
+    .home-border__bottom::after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        right: -4px;
+        bottom: 100px;
+        background: #A5A5A4;
+        border-radius: 16px;
+    }
+    
+    .home-border::before {
         content: "";
         position: absolute;
         width: 0.8px;
@@ -187,7 +245,7 @@
         top: 0;
     }
     
-    .banner-border::after {
+    .home-border::after {
         content: "";
         position: absolute;
         width: 0.8px;
@@ -436,10 +494,18 @@
     
     .arxiv {
         position: relative;
-        margin: 85px 0;
+        padding: 85px 0;
     }
     
-    .arxiv::after {
+    .arxiv .home-border__radius {
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: -19px;
+        right: 0
+    }
+    
+    .arxiv-main::after {
         content: '';
         height: 1px;
         position: absolute;
@@ -448,7 +514,7 @@
         background: #A5A5A4;
     }
     
-    .arxiv::before {
+    .arxiv-main::before {
         content: '';
         height: 1px;
         position: absolute;
@@ -457,11 +523,16 @@
         background: #A5A5A4;
     }
     
-    .arxiv-border {
+    .arxiv-main {
         position: relative;
     }
     
-    .arxiv-border::after {
+    .arxiv-inner__border {
+        position: relative;
+        display: flex;
+    }
+    
+    .arxiv-inner__border::after {
         content: "";
         position: absolute;
         right: -4px;
@@ -472,12 +543,45 @@
         background: #A5A5A4;
     }
     
+    .arxiv-inner .col-lg-3 .arxiv-card::before {
+        display: none
+    }
+    
+    .arxiv-inner .col-lg-5 .arxiv-inner__border {
+        margin-right: 70px;
+        justify-content: center;
+    }
+    
+    .arxiv-inner .col-lg-3 .arxiv-inner__border::before {
+        display: none
+    }
+    
+    .arxiv-inner .col-lg-3 .arxiv-inner__border::after {
+        display: none
+    }
+    
+    .arxiv-inner .col-lg-3 .arxiv-inner__border {
+        justify-content: end;
+    }
+    
+    .arxiv-inner .col-lg-3 .arxiv-card::after {
+        display: none
+    }
+    
+    .arxiv-inner .col-lg-5 .arxiv-card {
+        margin: 0 auto;
+    }
+    
     .arxiv-card {
-        padding: 40px 134px 40px 0px;
+        padding: 40px 0px;
         position: relative;
     }
     
-    .arxiv-card::before {
+    .arxiv-inner .col-lg-3 .arxiv-card__border::before {
+        display: none;
+    }
+    
+    .arxiv-card__border::before {
         content: "";
         position: absolute;
         right: -4px;
@@ -488,7 +592,7 @@
         background: #A5A5A4;
     }
     
-    .arxiv-card::after {
+    .arxiv-inner__border::before {
         content: '';
         height: 100%;
         position: absolute;

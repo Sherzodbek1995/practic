@@ -1,6 +1,6 @@
 <template>
   <section class="banner">
-    <div class="banner-border"></div>
+    <div class="home-border"><div class="home-border__radius"></div></div>
     <div class="banner-main">
       <div class="banner-item">
         <div class="container">
