@@ -14,13 +14,12 @@ export default {
     },
 
     css: [
-        "~assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css",
+        "~assets/fonts/fontawesome-free-6.1.1/fontawesome-free-6.1.1-web/css/all.min.css",
+
         "~/assets/css/style.css",
     ],
 
-    plugins: [
-        { src: "~/plugins/VueAwesomeSwiper.js", mode: "client" },
-    ],
+    plugins: [{ src: "~/plugins/VueAwesomeSwiper.js", mode: "client" }],
 
     components: true,
 

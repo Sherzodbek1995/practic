@@ -16,9 +16,7 @@
           </div>
           <button type="button" class="btn header-search__btn">
             <div class="header-search__icon">
-              <img src="~/assets/icons/search.png" alt="" /><span
-                >Поиск по сайту</span
-              >
+              <img src="~/assets/icons/search.png" alt="" /><span>Поиск по сайту</span>
             </div>
           </button>
         </div>
@@ -40,9 +38,7 @@
             <option value="Eng">Eng</option>
             <option value="Uzb">Uzb</option>
           </select>
-          <button type="button" class="btn header-right__btn">
-            Вход в программу
-          </button>
+          <button type="button" class="btn header-right__btn">Вход в программу</button>
           <button type=" button" class="btn header-menu">
             <span></span><span></span><span></span>
           </button>
