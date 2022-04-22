@@ -2,6 +2,11 @@
   <main class="home">
     <HomeBanner />
     <HomeArxiv />
+    <HomeModern />
+    <HomeNews />
+    <HomeSystem />
+    <HomeQuetion />
+    <HomeUsefull />
   </main>
 </template>
 

@@ -29,7 +29,7 @@
                 <div class="arxiv-card__border">
                   <div class="arxiv-card">
                     <div class="arxiv-card__icon">
-                      <img src="~/assets/icons/$.svg" alt="" />
+                      <img src="~/assets/icons/laptop.svg" alt="" />
                     </div>
                     <div class="arxiv-card__title">Мы команда архивов</div>
                     <div class="arxiv-card__text">
@@ -45,7 +45,7 @@
                 <div class="arxiv-card__border">
                   <div class="arxiv-card">
                     <div class="arxiv-card__icon">
-                      <img src="~/assets/icons/$.svg" alt="" />
+                      <img src="~/assets/icons/img.svg" alt="" />
                     </div>
                     <div class="arxiv-card__title">Мы команда архивов</div>
                     <div class="arxiv-card__text">
