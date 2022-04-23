@@ -446,9 +446,9 @@
         position: relative;
     }
     
-    .banner-news .swiper-slide::after {
+    .banner-news .swiper-container::after {
         content: "";
-        width: 100%;
+        width: 98%;
         height: 1px;
         background: #A5A5A4;
         position: absolute;
@@ -464,7 +464,7 @@
     
     .swiper-navigations {
         position: absolute;
-        bottom: 230px;
+        bottom: 220px;
         right: 260px;
     }
     
@@ -902,18 +902,21 @@
         color: #FFFFFF;
     }
     
-    .system-img {
-        transform: translate(100px, -25px);
-        height: 405px;
+    .system-mac__img {
+        height: 370px;
     }
     
-    .system-img img {
+    .system-mac__img img {
         width: 100%;
         height: 100%;
         object-position: center;
         object-fit: contain;
     }
     /* Section Question */
+    
+    .quetion {
+        position: relative;
+    }
     
     .quetion-main {
         padding: 85px 0 80px 0
@@ -1012,14 +1015,6 @@
         top: -19px;
     }
     
-    .swiper-slide {
-        width: 346px!important;
-    }
-    
-    .swiper-slide+.swiper-slide {
-        margin-left: 23px;
-    }
-    
     .usefull-header {
         display: flex;
         justify-content: space-between;
@@ -1053,6 +1048,7 @@
     
     .footer {
         background: #003399;
+        position: relative;
         height: 456px;
     }
     

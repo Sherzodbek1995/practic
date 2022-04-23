@@ -5,7 +5,23 @@
       <div class="banner-item">
         <div class="container">
           <div class="banner-inner">
-            <swiper :options="Bannertop" :loadtheme="false">
+            <swiper :options="Top" :loadtheme="false">
+              <swiper-slide>
+                <div class="banner-content">
+                  <span class="banner-content__date">30 сентября 2021</span>
+                  <h3 class="banner-content__title">
+                    Узбекистан и Венгрия запускают конкурс на разработку научных проектов
+                    и стартапов
+                  </h3>
+                  <p class="banner-content__text">
+                    Мининноваций Узбекистана совместно с Министерством иностранных дел и
+                    торговли Венгрии объявили о запуске конкурса стартапов и научных
+                    проектов по всем совместным направлениям...
+                  </p>
+                  <p class="banner-content__hashtag">#инновации</p>
+                  <button class="btn banner-content__btn" type="button">Подробнее</button>
+                </div>
+              </swiper-slide>
               <swiper-slide>
                 <div class="banner-content">
                   <span class="banner-content__date">30 сентября 2021</span>
@@ -29,7 +45,7 @@
     </div>
     <div class="banner-news">
       <div class="container">
-        <swiper :options="BannerBottom" :loadtheme="false">
+        <swiper :options="Bottom">
           <swiper-slide>
             <div class="banner-col">
               <span class="banner-col__date">14 сентября 2021</span>
@@ -83,24 +99,24 @@
 export default {
   data() {
     return {
-      BannerTop: {
+      Bottom: {
         slidesPerView: 3,
-        spaceBetween: 0,
+        spaceBetween: 2,
         // autoplay: { delay: 3000, disableOnInteraction: false },
         speed: 500,
-
+        lazy: 2,
         loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
       },
-      BannerBottom: {
-        slidesPerView: 3,
+      top: {
+        slidesPerView: 1,
         spaceBetween: 0,
         // autoplay: { delay: 3000, disableOnInteraction: false },
         speed: 500,
-
+        lazy: 2,
         loop: true,
         navigation: {
           nextEl: ".swiper-button-next",
