@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div class="system-img">
+              <div class="system-mac__img">
                 <img src="~/assets/images/Macbook Pro.png" alt="" />
               </div>
             </div>

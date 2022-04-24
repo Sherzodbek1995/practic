@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <Menu />
     <div class="container">
       <div class="header-inner">
         <div class="header-left">
@@ -28,7 +29,7 @@
             <img src="~/assets/icons/eyeglasses.png" alt="" />
           </a>
           <a href="" class="header-notification__volume">
-            <img src="~/assets/icons/high-volume (1).png" alt="" />
+            <img src="~/assets/icons/high-volume.png" alt="" />
           </a>
 
           <span class="line"></span>
@@ -39,8 +40,8 @@
             <option value="Uzb">Uzb</option>
           </select>
           <button type="button" class="btn header-right__btn">Вход в программу</button>
-          <button type=" button" class="btn header-menu">
-            <span></span><span></span><span></span>
+          <button type=" button" @click="openMenu" class="btn header-menu">
+            <i class="icon-menu"></i>
           </button>
         </div>
       </div>
@@ -48,6 +49,18 @@
   </header>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      isNavbar: true,
+    };
+  },
+  methods: {
+    openMenu() {
+      this.$store.commit("menu/setNavbar", true);
+      document.querySelector("body").style.overflowY = "hidden";
+    },
+  },
+};
 </script>
 <style></style>

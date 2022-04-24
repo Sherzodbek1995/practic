@@ -10,7 +10,7 @@
               <div class="swiper-pagination" slot="pagination" />
             </div>
           </div>
-          <swiper :options="usefull" :loadtheme="false">
+          <swiper effect="fade" :options="usefull" :loadtheme="false">
             <swiper-slide>
               <div class="usefull-card">
                 <img src="~assets/icons/pol.svg" alt="" />
@@ -47,8 +47,8 @@ export default {
   data() {
     return {
       usefull: {
-        slidesPerView: 4,
-        spaceBetween: 0,
+        slidesPerView: 4  ,
+        spaceBetween: 32,
         // autoplay: { delay: 3000, disableOnInteraction: false },
         speed: 500,
 

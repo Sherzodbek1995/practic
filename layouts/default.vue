@@ -1,13 +1,24 @@
 <template>
-  <div id="wrapper">
-    <Header />
+  <div
+    id="wrapper"
+    :class="{
+      menu__active: getNavbar,
+    }"
+  >
+    <PageNav v-if="$route.path != '/'" />
     <Nuxt />
     <Footer />
   </div>
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+
+export default {
+  computed: {
+    ...mapGetters("menu", ["getNavbar", "getNotification"]),
+  },
+};
 </script>
 
 <style>

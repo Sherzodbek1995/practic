@@ -87,8 +87,8 @@
           >
         </swiper>
         <div class="swiper-navigations">
-          <i slot="button-next" class="icon-angle-left swiper-button-next"></i>
           <i slot="button-prev" class="icon-angle-right swiper-button-prev"></i>
+          <i slot="button-next" class="icon-angle-left swiper-button-next"></i>
         </div>
       </div>
     </div>
@@ -107,20 +107,20 @@ export default {
         lazy: 2,
         loop: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".icon-angle-left",
+          prevEl: ".icon-angle-right",
         },
       },
-      top: {
+      Top: {
         slidesPerView: 1,
-        spaceBetween: 0,
+        spaceBetween: 5,
         // autoplay: { delay: 3000, disableOnInteraction: false },
         speed: 500,
         lazy: 2,
         loop: true,
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".icon-angle-left",
+          prevEl: ".icon-angle-right",
         },
       },
     };

@@ -11,60 +11,69 @@
         <div class="col-xl-9">
           <div class="row">
             <div class="col-lg-4">
-              <div class="news-card">
-                <div class="news-card__img">
-                  <img src="~assets/images/news1.png" alt="" />
+              <Nuxt-link to="/">
+                <div class="news-card">
+                  <div class="news-card__img">
+                    <img src="~assets/images/news1.png" alt="" />
+                  </div>
+                  <div class="news-card__date">
+                    <span>8 сентября 2021, 15:20</span> |<span>10</span>
+                  </div>
+                  <div class="news-card__content">
+                    <h3>Флаг Узбекистана запустили в стратосферу</h3>
+                    <p>
+                      Молодые ученые запустили аэростат с флагом Узбекистана в
+                      стратосферу. Видео запуска опубликовало Министерство инноваций в
+                      своем...
+                    </p>
+                    <span>#инновации</span>
+                  </div>
                 </div>
-                <div class="news-card__date">
-                  <span>8 сентября 2021, 15:20</span> |<span>10</span>
-                </div>
-                <div class="news-card__content">
-                  <h3>Флаг Узбекистана запустили в стратосферу</h3>
-                  <p>
-                    Молодые ученые запустили аэростат с флагом Узбекистана в стратосферу.
-                    Видео запуска опубликовало Министерство инноваций в своем...
-                  </p>
-                  <span>#инновации</span>
-                </div>
-              </div>
+              </Nuxt-link>
             </div>
+
             <div class="col-lg-4">
-              <div class="news-card">
-                <div class="news-card__img">
-                  <img src="~assets/images/new2.png" alt="" />
-                </div>
-                <div class="news-card__date">
-                  <span>8 сентября 2021, 15:20</span> |<span>10</span>
-                </div>
-                <div class="news-card__content">
-                  <h3>В администрации Чусткого района назначен замхокима...</h3>
-                  <p>
-                    В Чустском районе Наманганской области заместителем хокима по
-                    инновационному развитию стал Каримходжаев Отабек Тухтасинович. Об этом
-                    сообщает...
-                  </p>
-                  <span>#инновации</span>
-                </div>
-              </div>
+              <Nuxt-link to=""
+                ><div class="news-card">
+                  <div class="news-card__img">
+                    <img src="~assets/images/new2.png" alt="" />
+                  </div>
+                  <div class="news-card__date">
+                    <span>8 сентября 2021, 15:20</span> |<span>10</span>
+                  </div>
+                  <div class="news-card__content">
+                    <h3>В администрации Чусткого района назначен замхокима...</h3>
+                    <p>
+                      В Чустском районе Наманганской области заместителем хокима по
+                      инновационному развитию стал Каримходжаев Отабек Тухтасинович. Об
+                      этом сообщает...
+                    </p>
+                    <span>#инновации</span>
+                  </div>
+                </div></Nuxt-link
+              >
             </div>
+
             <div class="col-lg-4">
-              <div class="news-card">
-                <div class="news-card__img">
-                  <img src="~assets/images/new3.png" alt="" />
-                </div>
-                <div class="news-card__date">
-                  <span>8 сентября 2021, 15:20</span> |<span>10</span>
-                </div>
-                <div class="news-card__content">
-                  <h3>В Узбекистане запустят масштабный медиапроект для...</h3>
-                  <p>
-                    В Узбекистане запустят медиапроект FURSAT по созданию молодежных
-                    промышленных и предпринимательских зон (МППЗ) для привлечения
-                    молодых...
-                  </p>
-                  <span>#инновации</span>
-                </div>
-              </div>
+              <Nuxt-link to="">
+                <div class="news-card">
+                  <div class="news-card__img">
+                    <img src="~assets/images/new3.png" alt="" />
+                  </div>
+                  <div class="news-card__date">
+                    <span>8 сентября 2021, 15:20</span> |<span>10</span>
+                  </div>
+                  <div class="news-card__content">
+                    <h3>В Узбекистане запустят масштабный медиапроект для...</h3>
+                    <p>
+                      В Узбекистане запустят медиапроект FURSAT по созданию молодежных
+                      промышленных и предпринимательских зон (МППЗ) для привлечения
+                      молодых...
+                    </p>
+                    <span>#инновации</span>
+                  </div>
+                </div></Nuxt-link
+              >
             </div>
           </div>
         </div>

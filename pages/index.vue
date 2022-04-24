@@ -1,5 +1,6 @@
 <template>
   <main class="home">
+    <Header />
     <HomeBanner />
     <HomeArxiv />
     <HomeModern />

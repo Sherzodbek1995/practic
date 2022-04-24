@@ -24,18 +24,10 @@
                 </p>
                 <span>Мы в соцсетях:</span>
                 <div class="socials-logos">
-                  <div class="socials-svg">
-                    <img src="~assets/icons/face.svg" alt="" />
-                  </div>
-                  <div class="socials-svg">
-                    <img src="~assets/icons/insta.svg" alt="" />
-                  </div>
-                  <div class="socials-svg">
-                    <img src="~assets/icons/tele.svg" alt="" />
-                  </div>
-                  <div class="socials-svg">
-                    <img src="~assets/icons/youtubr.svg" alt="" />
-                  </div>
+                 <a href=""><i class="icon-facebook1"></i></a> 
+                 <a href=""><i class="icon-instagram"></i></a> 
+               <a href=""> <i class="icon-telegram1"></i></a>  
+                <a href=""> <i class="icon-youtube"></i></a> 
                 </div>
               </div>
             </div>

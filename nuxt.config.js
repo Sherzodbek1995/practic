@@ -13,7 +13,7 @@ export default {
         link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
 
-    css: ["~/assets/css/style.css"],
+    css: ["~/assets/css/style.css", "~/assets/fonts/icomoon/style.css"],
 
     plugins: [{ src: "~/plugins/VueAwesomeSwiper.js", mode: "client" }],
 
