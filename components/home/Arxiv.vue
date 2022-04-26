@@ -8,49 +8,16 @@
       <div class="container">
         <div class="arxiv-inner">
           <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-4" v-for="(item, index) in getArxiv" :key="index">
               <div class="arxiv-inner__border">
                 <div class="arxiv-card__border">
                   <div class="arxiv-card">
                     <div class="arxiv-card__icon">
-                      <img src="~/assets/icons/$.svg" alt="" />
+                      <img :src="item.img" alt="" />
                     </div>
-                    <div class="arxiv-card__title">Мы команда архивов</div>
+                    <div class="arxiv-card__title">{{ item.title }}</div>
                     <div class="arxiv-card__text">
-                      Мы команда архивов, записей и управления информацией профессионалов,
-                      отвечающих за записи и информацию
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5">
-              <div class="arxiv-inner__border">
-                <div class="arxiv-card__border">
-                  <div class="arxiv-card">
-                    <div class="arxiv-card__icon">
-                      <img src="~/assets/icons/laptop.svg" alt="" />
-                    </div>
-                    <div class="arxiv-card__title">Мы команда архивов</div>
-                    <div class="arxiv-card__text">
-                      Мы команда архивов, записей и управления информацией профессионалов,
-                      отвечающих за записи и информацию
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="arxiv-inner__border">
-                <div class="arxiv-card__border">
-                  <div class="arxiv-card">
-                    <div class="arxiv-card__icon">
-                      <img src="~/assets/icons/img.svg" alt="" />
-                    </div>
-                    <div class="arxiv-card__title">Мы команда архивов</div>
-                    <div class="arxiv-card__text">
-                      Мы команда архивов, записей и управления информацией профессионалов,
-                      отвечающих за записи и информацию
+                      {{ item.text }}
                     </div>
                   </div>
                 </div>
@@ -64,7 +31,12 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters("arxiv", ["getArxiv"]),
+  },
+};
 </script>
 
 <style></style>

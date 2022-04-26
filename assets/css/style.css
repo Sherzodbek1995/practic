@@ -7,7 +7,7 @@
 }
 
 .container {
-    max-width: 1464px;
+    max-width: 1470px;
 }
 
 body {
@@ -600,7 +600,7 @@ select {
 
 .banner-news .swiper-container::after {
     content: "";
-    width: 97%;
+    width: 98%;
     height: 1px;
     background: #A5A5A4;
     position: absolute;
@@ -617,7 +617,7 @@ select {
 .swiper-navigations {
     position: absolute;
     bottom: 220px;
-    right: 220px;
+    right: 210px;
 }
 
 .swiper-navigations i {
@@ -693,6 +693,7 @@ select {
 .arxiv-inner__border {
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 .arxiv-inner__border::after {
@@ -706,42 +707,9 @@ select {
     background: #A5A5A4;
 }
 
-.arxiv-inner .col-lg-3 .arxiv-card::before {
-    display: none
-}
-
-.arxiv-inner .col-lg-5 .arxiv-inner__border {
-    margin-right: 70px;
-    justify-content: center;
-}
-
-.arxiv-inner .col-lg-3 .arxiv-inner__border::before {
-    display: none
-}
-
-.arxiv-inner .col-lg-3 .arxiv-inner__border::after {
-    display: none
-}
-
-.arxiv-inner .col-lg-3 .arxiv-inner__border {
-    justify-content: flex-end;
-}
-
-.arxiv-inner .col-lg-3 .arxiv-card::after {
-    display: none
-}
-
-.arxiv-inner .col-lg-5 .arxiv-card {
-    margin: 0 auto;
-}
-
 .arxiv-card {
     padding: 40px 0px;
     position: relative;
-}
-
-.arxiv-inner .col-lg-3 .arxiv-card__border::before {
-    display: none;
 }
 
 .arxiv-card__border::before {
@@ -753,6 +721,31 @@ select {
     height: 9px;
     width: 9px;
     background: #A5A5A4;
+}
+
+.arxiv .home-border::before,
+.arxiv .home-border::after {
+    height: 105%;
+}
+
+.arxiv-inner .col-lg-4:first-child .arxiv-inner__border {
+    justify-content: start;
+}
+
+.arxiv-inner .col-lg-4:nth-child(3n+0) .arxiv-inner__border {
+    justify-content: end;
+}
+
+.arxiv-inner .col-lg-4:nth-child(3n+0) .arxiv-card__border::before {
+    display: none;
+}
+
+.arxiv-inner .col-lg-4:nth-child(3n+0) .arxiv-inner__border::before {
+    display: none;
+}
+
+.arxiv-inner .col-lg-4:nth-child(3n+0) .arxiv-inner__border::after {
+    display: none;
 }
 
 .arxiv-inner__border::before {
@@ -787,6 +780,10 @@ select {
 
 
 /*  Section Modern */
+
+.modern {
+    position: relative;
+}
 
 .modern-info h3 {
     font-family: 'Inter', sans-serif;
@@ -894,6 +891,11 @@ select {
     color: #1896FC;
 }
 
+.news .home-border,
+.modern .home-border {
+    top: 0;
+}
+
 .news-card__date {
     padding: 16px 0px 8px;
     font-family: 'Inter';
@@ -949,7 +951,7 @@ select {
 .news-side__col {
     padding-bottom: 16px;
     border-bottom: 1px solid #e0e0e0;
-    margin: 0 0 16px 8px;
+    margin: 0 0 16px 0;
 }
 
 .news-side__col h3 {
@@ -1158,7 +1160,7 @@ select {
 }
 
 .usefull-card {
-    padding: 16px 68px 24px;
+    padding: 16px 45px 24px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1172,6 +1174,11 @@ select {
 .usefull .home-border {
     height: 399px;
     top: -19px;
+}
+
+.usefull-header .pagination_banner {
+    display: flex;
+    align-items: center;
 }
 
 .usefull-header {
@@ -1278,7 +1285,12 @@ select {
     padding: 0 60px 0 155px;
 }
 
-.footer-menu ul li+li {
+.footer-menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-menu ul a+a {
     padding-top: 18px;
 }
 
@@ -1303,7 +1315,7 @@ select {
     padding-bottom: 20px;
 }
 
-.footer-menu ul li a {
+.footer-menu ul a {
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -1574,7 +1586,8 @@ select {
     align-items: center;
     width: 32px;
     height: 32px;
-    background: radial-gradient(179.06% 43.44% at -16.75% 7.2%, #3771C8 0%, #3771C8 12.8%, rgba(102, 0, 255, 0) 100%)/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    background: radial-gradient(179.06% 43.44% at -16.75% 7.2%, #3771C8 0%, #3771C8 12.8%, rgba(102, 0, 255, 0) 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
     , radial-gradient(92.18% 99.11% at 26.56% 107.7%, #FFDD55 0%, #FFDD55 10%, #FF543E 50%, #C837AB 100%), #262626;
     border-radius: 24px;
 }

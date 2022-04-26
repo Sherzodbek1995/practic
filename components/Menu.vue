@@ -11,9 +11,9 @@
           <div class="row">
             <div class="col-lg-8">
               <ul class="menu-bigger">
-                <li v-for="(item, index) in menu" :key="index" @click="closeMenu">
+                <li v-for="(list, index) in getMenu" :key="index" @click="closeMenu">
                   <nuxt-link to=""
-                    >{{ item.title
+                    >{{ list.title
                     }}<small
                       ><span v-if="index < 9">0</span>{{ index + 1 }}</small
                     ></nuxt-link
@@ -23,14 +23,8 @@
             </div>
             <div class="col-lg-4">
               <ul class="menu-child">
-                <li>
-                  <a href="#">Состоянии проекта</a>
-                </li>
-                <li>
-                  <a href="#">Инновации</a>
-                </li>
-                <li>
-                  <a href="#">Наука</a>
+                <li v-for="(item, index) in getChild" :key="index">
+                  <Nuxt-link to="/"> {{ item.title }}</Nuxt-link>
                 </li>
               </ul>
             </div>
@@ -42,35 +36,16 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       isNavbar: true,
-      menu: [
-        {
-          title: "Новости",
-          link: "/news",
-        },
-        {
-          title: "Руководство",
-          link: "/report",
-        },
-        {
-          title: "Медиа галерея",
-          link: "",
-        },
-        {
-          title: "О программе MUNIS",
-          link: "",
-        },
-        {
-          title: "Контакты",
-          link: "/news",
-        },
-      ],
     };
   },
-
+  computed: {
+    ...mapGetters("menu", ["getMenu", "getChild"]),
+  },
   methods: {
     closeMenu() {
       this.$store.commit("menu/setNavbar", false);

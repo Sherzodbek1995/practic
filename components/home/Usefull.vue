@@ -11,28 +11,10 @@
             </div>
           </div>
           <swiper effect="fade" :options="usefull" :loadtheme="false">
-            <swiper-slide>
+            <swiper-slide v-for="(item, index) in getUsefull" :key="index">
               <div class="usefull-card">
-                <img src="~assets/icons/pol.svg" alt="" />
-                <p class="usefull__text">Пресс-служба Президента Республики Узбекистан</p>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="usefull-card">
-                <img src="~assets/icons/pol2.svg" alt="" />
-                <p class="usefull__text">Пресс-служба Президента Республики Узбекистан</p>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="usefull-card">
-                <img src="~assets/icons/pol3.svg" alt="" />
-                <p class="usefull__text">Пресс-служба Президента Республики Узбекистан</p>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="usefull-card">
-                <img src="~assets/icons/pol4.svg" alt="" />
-                <p class="usefull__text">Пресс-служба Президента Республики Узбекистан</p>
+                <img :src="item.img" alt="" />
+                <p class="usefull__text">{{ item.text }}</p>
               </div>
             </swiper-slide>
           </swiper>
@@ -43,12 +25,13 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
       usefull: {
-        slidesPerView: 4  ,
-        spaceBetween: 32,
+        slidesPerView: 4,
+        spaceBetween: 24,
         // autoplay: { delay: 3000, disableOnInteraction: false },
         speed: 500,
 
@@ -67,6 +50,9 @@ export default {
         },
       },
     };
+  },
+  computed: {
+    ...mapGetters("usefull", ["getUsefull"]),
   },
 };
 </script>

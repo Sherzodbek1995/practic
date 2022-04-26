@@ -24,10 +24,10 @@
                 </p>
                 <span>Мы в соцсетях:</span>
                 <div class="socials-logos">
-                 <a href=""><i class="icon-facebook1"></i></a> 
-                 <a href=""><i class="icon-instagram"></i></a> 
-               <a href=""> <i class="icon-telegram1"></i></a>  
-                <a href=""> <i class="icon-youtube"></i></a> 
+                  <a href=""><i class="icon-facebook1"></i></a>
+                  <a href=""><i class="icon-instagram"></i></a>
+                  <a href=""> <i class="icon-telegram1"></i></a>
+                  <a href=""> <i class="icon-youtube"></i></a>
                 </div>
               </div>
             </div>
@@ -35,31 +35,29 @@
               <div class="footer-menu">
                 <ul>
                   <h5>Меню</h5>
-                  <li><a href="">О центре</a></li>
-                  <li><a href="">Разделы</a></li>
-                  <li><a href="">Международное сотрудничество</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Новости</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <Nuxt-link to="" v-for="(item, index) in getFootMenu" :key="index">{{
+                    item.title
+                  }}</Nuxt-link>
                 </ul>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="footer-contact">
-                <h5>Адрес:</h5>
-                <p>
-                  Адрес: 100174, г. Ташкент, Алмазарский р-н, ул. Университетская, дом 7
-                </p>
-                <h5>Телефон:</h5>
-                <p>+998 97 170 67 84</p>
-                <h5>Эл. адрес</h5>
-                <p>munis@mininnovation.uz</p>
+                <div
+                  class="footer-contact__content"
+                  v-for="(item, index) in getFootAdress"
+                  :key="index"
+                >
+                  <h5>{{ item.title }}</h5>
+                  <p>
+                    {{ item.text }}
+                  </p>
+                </div>
               </div>
             </div>
             <div class="col-lg-3">
               <div class="footer-email">
                 <input type="email" placeholder="Эл. почта" />
-
                 <button type="submit" class="btn footer-btn">Подписаться</button>
                 <h6>Сайт обновлялся последний раз: 06:42, 13.07.2021 (GMT+5)</h6>
               </div>
@@ -83,7 +81,12 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters("footMenu", ["getFootMenu", "getFootAdress"]),
+  },
+};
 </script>
 
 <style></style>

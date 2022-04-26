@@ -1,5 +1,6 @@
 <template>
   <section class="news">
+    <div class="home-border"></div>
     <div class="container">
       <div class="news-inner">
         <div class="news-header">
@@ -10,97 +11,34 @@
       <div class="row">
         <div class="col-xl-9">
           <div class="row">
-            <div class="col-lg-4">
-              <Nuxt-link to="/">
+            <div class="col-lg-4" v-for="(item, index) in getNewsHead" :key="index">
+              <Nuxt-link to="/news">
                 <div class="news-card">
                   <div class="news-card__img">
-                    <img src="~assets/images/news1.png" alt="" />
+                    <img :src="item.img" alt="" />
                   </div>
                   <div class="news-card__date">
-                    <span>8 сентября 2021, 15:20</span> |<span>10</span>
+                    <span>{{ item.date }}</span> |<span>10</span>
                   </div>
                   <div class="news-card__content">
-                    <h3>Флаг Узбекистана запустили в стратосферу</h3>
+                    <h3>{{ item.title }}</h3>
                     <p>
-                      Молодые ученые запустили аэростат с флагом Узбекистана в
-                      стратосферу. Видео запуска опубликовало Министерство инноваций в
-                      своем...
+                      {{ item.text }}
                     </p>
-                    <span>#инновации</span>
+                    <span>{{ item.tag }}</span>
                   </div>
                 </div>
               </Nuxt-link>
-            </div>
-
-            <div class="col-lg-4">
-              <Nuxt-link to=""
-                ><div class="news-card">
-                  <div class="news-card__img">
-                    <img src="~assets/images/new2.png" alt="" />
-                  </div>
-                  <div class="news-card__date">
-                    <span>8 сентября 2021, 15:20</span> |<span>10</span>
-                  </div>
-                  <div class="news-card__content">
-                    <h3>В администрации Чусткого района назначен замхокима...</h3>
-                    <p>
-                      В Чустском районе Наманганской области заместителем хокима по
-                      инновационному развитию стал Каримходжаев Отабек Тухтасинович. Об
-                      этом сообщает...
-                    </p>
-                    <span>#инновации</span>
-                  </div>
-                </div></Nuxt-link
-              >
-            </div>
-
-            <div class="col-lg-4">
-              <Nuxt-link to="">
-                <div class="news-card">
-                  <div class="news-card__img">
-                    <img src="~assets/images/new3.png" alt="" />
-                  </div>
-                  <div class="news-card__date">
-                    <span>8 сентября 2021, 15:20</span> |<span>10</span>
-                  </div>
-                  <div class="news-card__content">
-                    <h3>В Узбекистане запустят масштабный медиапроект для...</h3>
-                    <p>
-                      В Узбекистане запустят медиапроект FURSAT по созданию молодежных
-                      промышленных и предпринимательских зон (МППЗ) для привлечения
-                      молодых...
-                    </p>
-                    <span>#инновации</span>
-                  </div>
-                </div></Nuxt-link
-              >
             </div>
           </div>
         </div>
         <div class="col-xl-3">
           <div class="news-side">
-            <div class="news-side__col">
-              <h3>Bank of Baroda снизил ставки по жилищным кредитам до 6,5%</h3>
+            <div class="news-side__col" v-for="(item, index) in getNewsEnd" :key="index">
+              <h3>{{ item.title }}</h3>
               <div class="news-side__commit">
-                <span>8 сентября 2021</span><span>#состоянии проекта</span>
-              </div>
-            </div>
-            <div class="news-side__col">
-              <h3>Один из столичных районов преобразуют в инновационную...</h3>
-              <div class="news-side__commit">
-                <span>8 сентября 2021</span><span>#состоянии проекта</span>
-              </div>
-            </div>
-            <div class="news-side__col">
-              <h3>Мининноваций реализует 25 инвестпроектов на сумму...</h3>
-              <div class="news-side__commit">
-                <span>8 сентября 2021</span><span>#состоянии проекта</span>
-              </div>
-            </div>
-            <div class="news-side__col">
-              <h3>В Нукусе состоялась межотраслевая промышленная...</h3>
-              <div class="news-side__commit">
-                <span>8 сентября 2021</span><span>#состоянии проекта</span>
+                <span>{{ item.date }}</span
+                ><span>#состоянии проекта</span>
               </div>
             </div>
           </div>
@@ -111,7 +49,12 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters("news", ["getNewsHead", "getNewsEnd"]),
+  },
+};
 </script>
 
 <style></style>

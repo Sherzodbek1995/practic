@@ -6,35 +6,16 @@
         <div class="container">
           <div class="banner-inner">
             <swiper :options="Top" :loadtheme="false">
-              <swiper-slide>
+              <swiper-slide v-for="(item, index) in getHeadSlide" :key="index">
                 <div class="banner-content">
-                  <span class="banner-content__date">30 сентября 2021</span>
+                  <span class="banner-content__date">{{ item.date }}</span>
                   <h3 class="banner-content__title">
-                    Узбекистан и Венгрия запускают конкурс на разработку научных проектов
-                    и стартапов
+                    {{ item.title }}
                   </h3>
                   <p class="banner-content__text">
-                    Мининноваций Узбекистана совместно с Министерством иностранных дел и
-                    торговли Венгрии объявили о запуске конкурса стартапов и научных
-                    проектов по всем совместным направлениям...
+                    {{ item.text }}
                   </p>
-                  <p class="banner-content__hashtag">#инновации</p>
-                  <button class="btn banner-content__btn" type="button">Подробнее</button>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="banner-content">
-                  <span class="banner-content__date">30 сентября 2021</span>
-                  <h3 class="banner-content__title">
-                    Узбекистан и Венгрия запускают конкурс на разработку научных проектов
-                    и стартапов
-                  </h3>
-                  <p class="banner-content__text">
-                    Мининноваций Узбекистана совместно с Министерством иностранных дел и
-                    торговли Венгрии объявили о запуске конкурса стартапов и научных
-                    проектов по всем совместным направлениям...
-                  </p>
-                  <p class="banner-content__hashtag">#инновации</p>
+                  <p class="banner-content__hashtag">{{ item.tag }}</p>
                   <button class="btn banner-content__btn" type="button">Подробнее</button>
                 </div>
               </swiper-slide>
@@ -46,45 +27,18 @@
     <div class="banner-news">
       <div class="container">
         <swiper :options="Bottom">
-          <swiper-slide>
+          <swiper-slide v-for="(item, index) in getEndSlide" :key="index">
             <div class="banner-col">
-              <span class="banner-col__date">14 сентября 2021</span>
+              <span class="banner-col__date">{{ item.date }}</span>
               <h3 class="banner-col__title">
-                Индия запустит в Узбекистане онлайн-платформу телемедицины
+                {{ item.title }}
               </h3>
               <p class="banner-col__text">
-                Власти Узбекистана провели онлайн-встречу с партнерами из Индии по
-                вопросам трансфера...
+                {{ item.text }}
               </p>
-              <p class="banner-col__hashtag">#инновации</p>
+              <p class="banner-col__hashtag">{{ item.tag }}</p>
             </div>
           </swiper-slide>
-          <swiper-slide>
-            <div class="banner-col">
-              <span class="banner-col__date">13 сентября 2021</span>
-              <h3 class="banner-col__title">
-                В Андижане открылся инновационный молодежный технопарк
-              </h3>
-              <p class="banner-col__text">
-                Министр инновационного развития Иброхим Абдурахмонов ознакомился в
-                Андижане...
-              </p>
-              <p class="banner-col__hashtag">#инновации</p>
-            </div></swiper-slide
-          >
-          <swiper-slide>
-            <div class="banner-col">
-              <span class="banner-col__date">14 сентября 2021</span>
-              <h3 class="banner-col__title">
-                Ученый из РФ поможет властям Узбекистана усовершенствовать...
-              </h3>
-              <p class="banner-col__text">
-                Министр инновационного развития Республики Узбекистан Иброхим Абдурахмонов
-                провел...
-              </p>
-              <p class="banner-col__hashtag">#инновации</p>
-            </div></swiper-slide
-          >
         </swiper>
         <div class="swiper-navigations">
           <i slot="button-prev" class="icon-angle-right swiper-button-prev"></i>
@@ -96,6 +50,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   data() {
     return {
@@ -113,7 +68,7 @@ export default {
       },
       Top: {
         slidesPerView: 1,
-        spaceBetween: 5,
+        spaceBetween: 6,
         // autoplay: { delay: 3000, disableOnInteraction: false },
         speed: 500,
         lazy: 2,
@@ -124,6 +79,9 @@ export default {
         },
       },
     };
+  },
+  computed: {
+    ...mapGetters("banner", ["getHeadSlide", "getEndSlide"]),
   },
 };
 </script>

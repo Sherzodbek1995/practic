@@ -1,5 +1,6 @@
 <template>
   <header class="allNav">
+    <Menu />
     <div class="container">
       <div class="header-inner">
         <div class="allnav-left">
@@ -40,7 +41,7 @@
             <option value="Uzb">Uzb</option>
           </select>
           <button type="button" class="btn header-right__btn">Вход в программу</button>
-          <button type=" button" class="btn nav-menu">
+          <button type=" button" @click="openMenu" class="btn nav-menu">
             <i class="icon-menu"></i>
           </button>
         </div>
@@ -53,7 +54,12 @@ export default {
   data() {
     return {};
   },
-  methods: {},
+  methods: {
+    openMenu() {
+      this.$store.commit("menu/setNavbar", true);
+      document.querySelector("body").style.overflowY = "hidden";
+    },
+  },
 };
 </script>
 <style></style>
