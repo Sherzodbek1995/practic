@@ -11,129 +11,22 @@
             <div class="row">
               <div class="col-lg-9">
                 <div class="quetion-body__list">
-                  <div class="quetion-item">
+                  <div
+                    class="quetion-item"
+                    v-for="(item, index) in getquetion"
+                    :key="index"
+                  >
                     <b-button
-                      v-b-toggle.collapse-1
+                      v-b-toggle="'collapse-' + index"
                       class="quetion-btn"
                       variant="transparent"
-                      ><span>Как настроить часто задаваемые вопросы в MUNIS ?</span>
+                      ><span>{{ item.title }}</span>
                       <img src="~/assets/icons/plus.svg" alt="" />
                     </b-button>
-                    <b-collapse id="collapse-1" class="mt-2">
+                    <b-collapse :id="'collapse-' + index" class="mt-2">
                       <div class="quetion-card">
                         <p class="card-text">
-                          28 октября 2020 года Совет директоров Всемирного банка одобрил
-                          проект «Модернизация национальной инновационной системы
-                          Узбекистана» с предоставлением финансовых средств в размере 50
-                          млн. долларов США. Исполнительным органом данного проекта
-                          является Министерство Инновационного развития (МИР) Республики
-                          Узбекистан.
-                        </p>
-                      </div>
-                    </b-collapse>
-                  </div>
-                  <div class="quetion-item">
-                    <b-button
-                      v-b-toggle.collapse-2
-                      class="quetion-btn"
-                      variant="transparent"
-                      ><span>Что мы можем вам порекомендовать ?</span>
-                      <img src="~/assets/icons/plus.svg" alt=""
-                    /></b-button>
-                    <b-collapse id="collapse-2" class="mt-2">
-                      <div class="quetion-card">
-                        <p class="card-text">
-                          28 октября 2020 года Совет директоров Всемирного банка одобрил
-                          проект «Модернизация национальной инновационной системы
-                          Узбекистана» с предоставлением финансовых средств в размере 50
-                          млн. долларов США. Исполнительным органом данного проекта
-                          является Министерство Инновационного развития (МИР) Республики
-                          Узбекистан.
-                        </p>
-                      </div>
-                    </b-collapse>
-                  </div>
-                  <div class="quetion-item">
-                    <b-button
-                      v-b-toggle.collapse-3
-                      class="quetion-btn"
-                      variant="transparent"
-                      ><span> Где мы находимся ?</span>
-                      <img src="~/assets/icons/plus.svg" alt=""
-                    /></b-button>
-                    <b-collapse id="collapse-3" class="mt-2">
-                      <div class="quetion-card">
-                        <p class="card-text">
-                          28 октября 2020 года Совет директоров Всемирного банка одобрил
-                          проект «Модернизация национальной инновационной системы
-                          Узбекистана» с предоставлением финансовых средств в размере 50
-                          млн. долларов США. Исполнительным органом данного проекта
-                          является Министерство Инновационного развития (МИР) Республики
-                          Узбекистан.
-                        </p>
-                      </div>
-                    </b-collapse>
-                  </div>
-                  <div class="quetion-item">
-                    <b-button
-                      v-b-toggle.collapse-4
-                      class="quetion-btn"
-                      variant="transparent"
-                      ><span> С какими компаниями у нас отношения ?</span>
-                      <img src="~/assets/icons/plus.svg" alt=""
-                    /></b-button>
-                    <b-collapse id="collapse-4" class="mt-2">
-                      <div class="quetion-card">
-                        <p class="card-text">
-                          28 октября 2020 года Совет директоров Всемирного банка одобрил
-                          проект «Модернизация национальной инновационной системы
-                          Узбекистана» с предоставлением финансовых средств в размере 50
-                          млн. долларов США. Исполнительным органом данного проекта
-                          является Министерство Инновационного развития (МИР) Республики
-                          Узбекистан.
-                        </p>
-                      </div>
-                    </b-collapse>
-                  </div>
-                  <div class="quetion-item">
-                    <b-button
-                      v-b-toggle.collapse-5
-                      class="quetion-btn"
-                      variant="transparent"
-                    >
-                      <span>Как настроить часто задаваемые вопросы в MUNIS ?</span>
-                      <img src="~/assets/icons/plus.svg" alt=""
-                    /></b-button>
-                    <b-collapse id="collapse-5" class="mt-2">
-                      <div class="quetion-card">
-                        <p class="card-text">
-                          28 октября 2020 года Совет директоров Всемирного банка одобрил
-                          проект «Модернизация национальной инновационной системы
-                          Узбекистана» с предоставлением финансовых средств в размере 50
-                          млн. долларов США. Исполнительным органом данного проекта
-                          является Министерство Инновационного развития (МИР) Республики
-                          Узбекистан.
-                        </p>
-                      </div>
-                    </b-collapse>
-                  </div>
-                  <div class="quetion-item">
-                    <b-button
-                      v-b-toggle.collapse-6
-                      class="quetion-btn"
-                      variant="transparent"
-                      ><span>Как настроить часто задаваемые вопросы в MUNIS ?</span>
-                      <img src="~/assets/icons/plus.svg" alt="" />
-                    </b-button>
-                    <b-collapse id="collapse-6" class="mt-2">
-                      <div class="quetion-card">
-                        <p class="card-text">
-                          28 октября 2020 года Совет директоров Всемирного банка одобрил
-                          проект «Модернизация национальной инновационной системы
-                          Узбекистана» с предоставлением финансовых средств в размере 50
-                          млн. долларов США. Исполнительным органом данного проекта
-                          является Министерство Инновационного развития (МИР) Республики
-                          Узбекистан.
+                          {{ item.text }}
                         </p>
                       </div>
                     </b-collapse>
@@ -154,7 +47,12 @@
 </template>
 
 <script>
-export default {};
+import { mapGetters } from "vuex";
+export default {
+  computed: {
+    ...mapGetters("quetion", ["getquetion"]),
+  },
+};
 </script>
 
 <style></style>
